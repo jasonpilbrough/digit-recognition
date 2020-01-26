@@ -1,3 +1,16 @@
+
+body{ 
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Nunito', sans-serif;
+}
+
+.btn{
+	font-family: 'Nunito', sans-serif;
+}
+
 .center-in-container{
 	padding-left: 0;
     padding-right: 0;
@@ -19,11 +32,13 @@
 .guess-main{
 	font-size: 5em;
 	line-height: 0.8em;
+	font-family: 'Nunito', sans-serif;
 }
 
 .guess-secondary{
 	font-size: 2em ;
 	line-height: 0.8em;
+	font-family: 'Nunito', sans-serif;
 }
 
 
@@ -64,6 +79,6 @@
 }
 
 .min-height{
-	min-height:84px;
+	min-height:80px;
 }
 

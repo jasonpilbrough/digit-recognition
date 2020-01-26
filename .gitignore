@@ -5,3 +5,4 @@ best_weights/
 mnist.pkl.gz
 *.txt
 old_datasets/
+web_interface/prod/vendor/
