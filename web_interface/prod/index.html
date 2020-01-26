@@ -40,19 +40,19 @@
 			</div>
 			<div class="row mb-3">
 				<div class="col-12">
-					<p> Draw a digit in the box below. The power of machine learning will be used to predict the digit that you have drawn. The confidence associated with the prediction is also shown. </p>
+					<p class="justify-text"> This is a demonstration of how a neural network can be used to recognise handwritten digits. Draw a digit in the box below and see how accurately the neutral net is able to recognise it. </p>
 				</div>
 			</div>
 			<div class="row mb-4">
 				<div class="col-6">
-					<canvas id="canvas" width="336" height="336" style="border:2px solid;"> </canvas>
+					<canvas id="canvas" class="canvas-draw" width="336" height="336"> </canvas>
 					<input class="btn btn-secondary align-canvas-right py-1" type="button" onclick="clearCanvas()" value="Clear">
 				</div>
 				<div class="col-6">
 				
 						<div class="row border-bottom">
 							<div class="col-12">
-								<h4 class="same-line"> Predictions  </h4> <span class="same-line smaller-text">(confidence) </span>
+								<h4 class="same-line"> Prediction  </h4> <span class="same-line smaller-text">(confidence) </span>
 							</div>
 						</div>
 						
@@ -92,7 +92,10 @@
 			<div class="row">
 				<div class="col-12">
 					
-					<p class="notes"> <b> Implementation notes: </b> The neural network used was trained using the MNIST dataset (link). Preprocessing includes bounding box, center of mass, and converting into bins. Model was trained using Python and weights were exported to web interface written in Javascript. Net architecture: input layer of 728 (28x28 pixels) hidden layer 100, output layer 10 with softmax activation function. Early stopping to avoid overfitting </p>
+					<p class="notes justify-text"> <b> Implementation notes: </b> A three layer neural network is used with 784 input neurons, representing a 28x28 pixel image, fully connected to a hidden layer of 100 neurons. The output layer contains 10 fully connected neurons corresponding to each digit from 0 to 10. A softmax activation function is used in the output layer allowing each output to be interpreted as a probability. The model was trained using stochastic gradient descent with the MNIST dataset, available at <a href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a>. As recommend for this dataset, each image is pre-processed before being passed through the net. This involves first scaling the image to fit in a 20x20 pixel bounding box, then centering the image on its center of mass, and finally normalising each pixel to have a value between 0 and 1. The net was trained in Python and weights and biases were exported to run in Javascript. </p>
+				</div>
+				<div class="col-12 smaller-text">
+					<a href="" style="float:right;">more projects...</a>
 				</div>
 			</div>
 			

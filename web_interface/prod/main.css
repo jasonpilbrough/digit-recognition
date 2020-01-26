@@ -5,6 +5,16 @@ body{
 
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	
+}
+
+h1{
+	color: rgb(54, 162, 235);
+}
+
+.canvas-draw{
+	border: 2px solid;
 }
 
 .btn{
@@ -53,6 +63,11 @@ h1,h2,h3,h4,h5,h6{
 .notes{
 	color: #999;
 	font-size: 11px;
+	
+}
+
+.justify-text{
+	text-align: justify;
 }
 
 .align-canvas-right{
@@ -67,7 +82,7 @@ h1,h2,h3,h4,h5,h6{
 .border-bottom{
 	border-style: solid;
   	border-width: 0px 0px 1px 0px;
-  	border-color: grey;
+  	border-color: #dee2e6;
 }	
 
 .hidden{
