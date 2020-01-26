@@ -21,7 +21,7 @@
 	
 	<div class="container mt-5">
 		<div class="">
-			<div class="row">
+			<div class="row ">
 				<div class="col-12">
 					<h1> Handwritten Digit Recogniser </h1>
 				</div>
@@ -34,67 +34,49 @@
 			<div class="row mb-4">
 				<div class="col-6">
 					<canvas id="canvas" width="336" height="336" style="border:2px solid;"> </canvas>
-					<input class="btn btn-secondary align-canvas-right" type="button" onclick="clearCanvas()" value="Clear">
+					<input class="btn btn-secondary align-canvas-right py-1" type="button" onclick="clearCanvas()" value="Clear">
 				</div>
 				<div class="col-6">
 				
-						<div class=row>
-							<div class="col-6">
-								<h5> Prediction </h5>
-							</div>
-							<div class="col-6">
-								<h5> Confidence </h5>
-							</div>
-						</div>
-					
-					
-						<div class=row>
-							<div class="col-6">
-								<span id="guess1" class="guess1" > </span>
-							</div>
-							<div class="col-6 align-text-bottom">
-								<span id="guess1-confidence" class="" > </span>
-							</div>
-						</div>
-					
-						<hr>
-					
-						<div class=row>
+						<div class="row border-bottom">
 							<div class="col-12">
-								<h6> Other Predictions </h6>
+								<h4 class="same-line"> Predictions  </h4> <span class="same-line smaller-text">(confidence) </span>
 							</div>
 						</div>
+						
+						<div id="prediction-prompt" class="prompt mt-3 min-height">
+							<p> Start drawing to see predictions...</p>
+						</div>
+						
+						<div id="prediction-result" class="hidden ">
+						
+							<div class="row mb-3 mt-3">
+								<div class="col-5 ">
+									<span id="guess1" class="guess-main" > </span>
+									<span id="guess1-confidence" class="smaller-text" > </span>
+								</div>
+								<div class="col-4 align-bottom">
+									<span id="guess2" class="guess-secondary" > </span>
+									<span id="guess2-confidence" class="smaller-text" > </span>
+								</div>
+								<div class="col-3 align-bottom">
+									<span id="guess3" class="guess-secondary" > </span>
+									<span id="guess3-confidence" class="smaller-text" > </span>
+								</div>
+							</div>	
+						
 					
+					
+							
+						</div>
 						<div class=row>
-							<div class="col-6">
-								<span id="guess2" class="guess3" > </span>
+								<div class="col-12">
+									<canvas id="predictionChart" width="400" height="200"></canvas>
+								</div>
 							</div>
-							<div class="col-6 align-text-bottom">
-								<span id="guess2-confidence" class="" > </span>
-							</div>
-						</div>
-					
-						<div class=row>
-							<div class="col-6">
-								<span id="guess3" class="guess3" > </span>
-							</div>
-							<div class="col-6">
-								<span id="guess3-confidence" class="align-text-bottom " > </span>
-							</div>
-						</div>
-					
-						<div class=row>
-							<div class="col-6">
-								<span id="guess4" class="guess3" > </span>
-							</div>
-							<div class="col-6">
-								<span id="guess4-confidence" class="align-text-bottom " > </span>
-							</div>
-						</div>
-					
-					
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-12">
 					
@@ -113,6 +95,8 @@
 	<canvas id="canvas-binned-zoom" width="336" height="336" style="border:2px solid; display:none;"> </canvas>
 	
 	
+  <!-- ChartJS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
 	
   <!-- Bootstrap and dependencies-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -123,6 +107,7 @@
   <!-- Custom scripts for this template -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.5/math.js"></script>
   <script src="main.js?v=137"></script>
+  
  
 
 </body>

@@ -16,33 +16,23 @@
 	
 }
 
-.guess1{
+.guess-main{
 	font-size: 5em;
-	line-height: 1em;
+	line-height: 0.8em;
 }
 
-.guess2{
+.guess-secondary{
 	font-size: 2em ;
+	line-height: 0.8em;
 }
 
-.guess3{
-	font-size: 1em; 
-	margin-left: 12px;
+
+.same-line{
+	display: inline;
 }
 
-.guess-container{
-	border-style: solid;
-  	border-width: 0px 0px 1px 0px;
-  	border-color: #999;
-  	
-}
-
-.confidence{
-	margin-left:auto;
-}
-
-.align-text-bottom {
-  text-align: bottom;
+.align-bottom{
+	margin-top:auto;
 }
 
 .notes{
@@ -53,3 +43,27 @@
 .align-canvas-right{
 	margin-left: 276px;
 }
+
+.smaller-text{
+	font-size: 0.8em;
+	color: grey;
+}
+
+.border-bottom{
+	border-style: solid;
+  	border-width: 0px 0px 1px 0px;
+  	border-color: grey;
+}	
+
+.hidden{
+	 display:none;
+}
+
+.prompt{
+	color: grey;
+}
+
+.min-height{
+	min-height:84px;
+}
+
