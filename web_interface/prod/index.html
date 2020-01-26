@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+	
+	
+	
+  <title>Handwriting Recogniser</title>
+
+
+</head>
+
+<body onload="init()">
+
+	
+	<div class="container mt-5">
+		<div class="">
+			<div class="row">
+				<div class="col-12">
+					<h1> Handwritten Digit Recogniser </h1>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<p> Draw a digit in the box below. The power of machine learning will be used to predict the digit that you have drawn. The confidence associated with the prediction is also shown. </p>
+				</div>
+			</div>
+			<div class="row mb-4">
+				<div class="col-6">
+					<canvas id="canvas" width="336" height="336" style="border:2px solid;"> </canvas>
+					<input class="btn btn-secondary align-canvas-right" type="button" onclick="clearCanvas()" value="Clear">
+				</div>
+				<div class="col-6">
+				
+						<div class=row>
+							<div class="col-6">
+								<h5> Prediction </h5>
+							</div>
+							<div class="col-6">
+								<h5> Confidence </h5>
+							</div>
+						</div>
+					
+					
+						<div class=row>
+							<div class="col-6">
+								<span id="guess1" class="guess1" > </span>
+							</div>
+							<div class="col-6 align-text-bottom">
+								<span id="guess1-confidence" class="" > </span>
+							</div>
+						</div>
+					
+						<hr>
+					
+						<div class=row>
+							<div class="col-12">
+								<h6> Other Predictions </h6>
+							</div>
+						</div>
+					
+						<div class=row>
+							<div class="col-6">
+								<span id="guess2" class="guess3" > </span>
+							</div>
+							<div class="col-6 align-text-bottom">
+								<span id="guess2-confidence" class="" > </span>
+							</div>
+						</div>
+					
+						<div class=row>
+							<div class="col-6">
+								<span id="guess3" class="guess3" > </span>
+							</div>
+							<div class="col-6">
+								<span id="guess3-confidence" class="align-text-bottom " > </span>
+							</div>
+						</div>
+					
+						<div class=row>
+							<div class="col-6">
+								<span id="guess4" class="guess3" > </span>
+							</div>
+							<div class="col-6">
+								<span id="guess4-confidence" class="align-text-bottom " > </span>
+							</div>
+						</div>
+					
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					
+					<p class="notes"> <b> Implementation notes: </b> The neural network used was trained using the MNIST dataset (link). Preprocessing includes bounding box, center of mass, and converting into bins. Model was trained using Python and weights were exported to web interface written in Javascript. Net architecture: input layer of 728 (28x28 pixels) hidden layer 100, output layer 10 with softmax activation function. Early stopping to avoid overfitting </p>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+
+	
+	<canvas id="canvas-bounded" width="336" height="336" style="border:2px solid; display:none;"> </canvas>
+	<canvas id="canvas-centered" width="336" height="336" style="border:2px solid; display:none;"> </canvas>
+	<canvas id="canvas-binned" width="28" height="28" style="border:2px solid; display:none;"> </canvas>
+	<canvas id="canvas-binned-zoom" width="336" height="336" style="border:2px solid; display:none;"> </canvas>
+	
+	
+	
+  <!-- Bootstrap and dependencies-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+	
+  <!-- Custom scripts for this template -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.5/math.js"></script>
+  <script src="main.js?v=137"></script>
+ 
+
+</body>
+
+</html>
+

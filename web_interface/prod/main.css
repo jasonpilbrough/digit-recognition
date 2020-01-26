@@ -1,0 +1,55 @@
+.center-in-container{
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.container {
+	max-width: 800px;
+}
+
+.align-right{
+	margin-left:auto;
+	display: block;
+	
+}
+
+.guess1{
+	font-size: 5em;
+	line-height: 1em;
+}
+
+.guess2{
+	font-size: 2em ;
+}
+
+.guess3{
+	font-size: 1em; 
+	margin-left: 12px;
+}
+
+.guess-container{
+	border-style: solid;
+  	border-width: 0px 0px 1px 0px;
+  	border-color: #999;
+  	
+}
+
+.confidence{
+	margin-left:auto;
+}
+
+.align-text-bottom {
+  text-align: bottom;
+}
+
+.notes{
+	color: #999;
+	font-size: 11px;
+}
+
+.align-canvas-right{
+	margin-left: 276px;
+}
