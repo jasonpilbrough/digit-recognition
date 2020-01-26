@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Handwriting Recogniser</title>
+
+
+</head>
+
+<body onload="init()">
+
+	<canvas id="canvas" width="336" height="336" style="border:2px solid;"> </canvas>
+	<canvas id="canvas-bounded" width="336" height="336" style="border:2px solid; display:none;"> </canvas>
+	<canvas id="canvas-centered" width="336" height="336" style="border:2px solid;"> </canvas>
+	<canvas id="canvas-binned" width="28" height="28" style="border:2px solid;"> </canvas>
+	<canvas id="canvas-binned-zoom" width="336" height="336" style="border:2px solid; "> </canvas>
+	
+	<canvas id="canvas-put-big" width="336" height="336" style="border:2px solid;"> </canvas>
+	
+	<canvas id="canvas_resize" width="28" height="28" style="border:2px solid; display:none;"> </canvas>
+	
+	<br>
+	
+	<input type="button" onclick="clearCanvas()" value="Clear">
+	<input type="button" onclick="makeGuess()" value="Guess">
+	
+	<p> Best guess: <span id="guess"> </span> </p>
+	<p> 2nd guess: <span id="guess2"> </span> </p>
+	
+	<a href="" style="display:none;" id="download"></a>
+	<hr>
+		<h3> Build Dataset </h3>
+		<p > 
+			<img id="canvasimg" style="border:2px solid;"> 
+			
+			with label 
+			<input id="data_label" type="number" value=0 style="width: 30px">  
+			
+		</p>
+		<p>
+			<input type="button" onclick="addToDataSet()" value="Capture">
+		</p>
+		
+		<p> Last 5 data values:</p>
+		<img id="img_prev1" style="border:2px solid;"> 
+		<img id="img_prev2" style="border:2px solid;"> 
+		<img id="img_prev3" style="border:2px solid;"> 
+		<img id="img_prev4" style="border:2px solid;"> 
+		<img id="img_prev5" style="border:2px solid;"> 
+		<img id="img_prev6" style="border:2px solid;"> 
+		<img id="img_prev7" style="border:2px solid;"> 
+		<img id="img_prev8" style="border:2px solid;"> 
+		<img id="img_prev9" style="border:2px solid;"> 
+		<img id="img_prev10" style="border:2px solid;"> 
+		
+		<br>
+		<br>
+		
+		<a href="" id="download_dataset">click here to download dataset</a>
+		<p>
+			<input type="button" onclick="clearDataset()" value="Clear Dataset">
+		</p>
+
+		
+		
+	<hr>
+	<canvas id="canvas_put" width="28" height="28" style="border:2px solid;"> </canvas>
+	
+	<div id="dataset-show">
+		<p> Showing dataset</p>
+	
+	</div>
+	
+	
+  <!-- Custom scripts for this template -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.5/math.js"></script>
+  <script src="main.js?v=137"></script>
+ 
+
+</body>
+
+</html>
+
