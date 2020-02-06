@@ -598,9 +598,10 @@ function makeGuess(){
 	var confidence2 = Math.round((keys[1])*1000)/10
 	var confidence3 = Math.round((keys[2])*1000)/10
 	
+	
 	document.getElementById('guess1-confidence').textContent=(" ("+(confidence1>99.9?">99.9":confidence1)+"%)");
 	document.getElementById('guess2-confidence').textContent=(" ("+(confidence2<0.1?"<0.1":confidence2)+"%)");
-	document.getElementById('guess3-confidence').textContent=(" ("+(confidence3<0,1?"<0.1":confidence3)+"%)");
+	document.getElementById('guess3-confidence').textContent=(" ("+(confidence3<0.1?"<0.1":confidence3)+"%)");
 
 
 }
