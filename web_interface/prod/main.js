@@ -695,6 +695,7 @@ function init() {
 						labelString: "digit",
 						padding:0
 					}*/
+					type: 'category',
 				}],
 			},
 			title: {
@@ -847,9 +848,6 @@ function getImageData(canvasName){
 	
 	return currentContext.getImageData(0, 0, currentCanvas.width, currentCanvas.height)
 }
-
-
-
 
 
 function preprocessImage(){
@@ -1080,7 +1078,18 @@ function makeGuess(){
 
 
 	PREDICTION_CHART.data.datasets[0].data = A2
+	
+	PREDICTION_CHART.options.tooltips = {
+        callbacks: {
+            label: function(tooltipItems, data) {
+            	//convert labels to percentage and round to 2dp
+                return Math.round(tooltipItems.yLabel*10000)/100 + "%"
+            }
+        }
+    }
+    
 	PREDICTION_CHART.update()
+	
 	
 	//unhide prediction div
 	document.getElementById('prediction-result').classList.remove("hidden");
@@ -1091,7 +1100,7 @@ function makeGuess(){
 	
 	
 
-	var keys = A2
+	var keys = Array.from(A2) //NB must create copy of array A2
 	var values = [0,1,2,3,4,5,6,7,8,9];
 	var resultDic = {};
 	keys.forEach((key, i) => resultDic[key] = values[i]);
