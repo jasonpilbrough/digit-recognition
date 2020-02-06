@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,h6{
 	
 }
 
-h1{
+h1,h2,h3{
 	color: rgb(54, 162, 235);
 }
 
@@ -29,9 +29,27 @@ h1{
     display: block;
 }
 
-.container {
-	max-width: 800px;
+
+
+@media (min-width: 992px) {  
+	.container {
+		max-width: 800px;
+	}
 }
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 800px;
+	}
+}
+
+
+@media (max-width: 768px) {  
+	.responsive-title {
+		font-size: 2rem;
+	}
+}
+
 
 .align-right{
 	margin-left:auto;

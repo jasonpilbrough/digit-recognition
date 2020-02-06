@@ -34,8 +34,9 @@
 	<div class="container mt-5">
 		<div class="">
 			<div class="row ">
-				<div class="col-12">
-					<h1>Handwritten Digit Recogniser  <i class="fas fa-signature"></i>   </h1>
+				<div class="col-12 mb-2">
+					<h1 class="responsive-title"> Handwritten Digit Recogniser  </h1>
+					<!-- <i class="fas fa-signature"></i>  -->
 				</div>
 			</div>
 			<div class="row mb-3">
@@ -44,11 +45,11 @@
 				</div>
 			</div>
 			<div class="row mb-4">
-				<div class="col-6">
+				<div class="col-md-6 col-12 mb-4">
 					<canvas id="canvas" class="canvas-draw" width="336" height="336"> </canvas>
 					<input class="btn btn-secondary align-canvas-right py-1" type="button" onclick="clearCanvas()" value="Clear">
 				</div>
-				<div class="col-6">
+				<div class="col-md-6 col-12 pl-4">
 				
 						<div class="row border-bottom">
 							<div class="col-12">
@@ -67,7 +68,7 @@
 									<span id="guess1" class="guess-main" > </span>
 									<span id="guess1-confidence" class="smaller-text" > </span>
 								</div>
-								<div class="col-4 align-bottom">
+								<div class="col-3 align-bottom">
 									<span id="guess2" class="guess-secondary" > </span>
 									<span id="guess2-confidence" class="smaller-text" > </span>
 								</div>
@@ -92,9 +93,20 @@
 			<div class="row">
 				<div class="col-12">
 					
-					<p class="notes justify-text"> <b> Implementation notes: </b> A three layer neural network is used with 784 input neurons, representing a 28x28 pixel image, fully connected to a hidden layer of 100 neurons. The output layer contains 10 fully connected neurons corresponding to each digit from 0 to 10. A softmax activation function is used in the output layer allowing each output to be interpreted as a probability. The model was trained using stochastic gradient descent with the MNIST dataset, available at <a href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a>. As recommend for this dataset, each image is pre-processed before being passed through the net. This involves first scaling the image to fit in a 20x20 pixel bounding box, then centering the image on its center of mass, and finally normalising each pixel to have a value between 0 and 1. The net was trained in Python and weights and biases were exported to run in Javascript. </p>
+					<p class="notes justify-text"> 
+						<b> Implementation notes: </b> A three layer neural network is used with 784 input neurons, 
+						representing a 28x28 pixel image, fully connected to a hidden layer of 100 neurons. The 
+						output layer contains 10 fully connected neurons corresponding to each digit from 0 to 9. A 
+						softmax activation function is used in the output layer allowing each output to be interpreted 
+						as a probability. The model was trained using stochastic gradient descent with the MNIST dataset, 
+						available at <a href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a>. 
+						As recommend for this dataset, each image is pre-processed before being passed through the net. 
+						This involves first scaling the image to fit in a 20x20 pixel bounding box, then centering the 
+						image on its center of mass, and finally normalising each pixel to have a value between 0 and 1. 
+						The net was trained in Python and weights and biases were exported to run in Javascript. 
+					</p>
 				</div>
-				<div class="col-12 smaller-text">
+				<div class="col-12 smaller-text mb-5">
 					<a href="" style="float:right;">more projects...</a>
 				</div>
 			</div>
